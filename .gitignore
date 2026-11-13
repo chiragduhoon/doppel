@@ -1,0 +1,15 @@
+# secrets and Telegram login session
+.env
+*.session
+data/
+
+# personal persona: real details about you and the people you text
+persona/persona.md
+persona/contacts.json
+persona/style_examples.json
+
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/

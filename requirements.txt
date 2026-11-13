@@ -1,0 +1,12 @@
+google-genai>=1.0.0
+python-dotenv>=1.0.0
+
+# Userbot mode (src/userbot.py) — logs in as your real Telegram account
+telethon>=1.36.0
+
+# Bot-account mode (src/bot.py) — the safer, separate @username alternative.
+# Not needed if you're only using the userbot.
+python-telegram-bot>=21.0
+
+# Optional: only needed if you set LLM_PROVIDER=anthropic in .env
+# anthropic>=0.50.0

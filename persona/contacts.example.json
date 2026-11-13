@@ -1,0 +1,8 @@
+{
+  "contacts": [
+    {
+      "match": ["asha", "kapoor"],
+      "rule": "- Special rule for this contact: call her Asha, keep the tone warm and gentle, no teasing."
+    }
+  ]
+}
