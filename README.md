@@ -15,6 +15,22 @@ Pick based on how much you trust the "never admits it's a bot" behavior around p
 
 ## How it works
 
+```mermaid
+flowchart LR
+    A["Friend texts you<br/>on Telegram"] --> B["userbot.py / bot.py"]
+    B --> C["ChatMemory<br/>per-contact history"]
+    P["persona.md<br/>who you are"] --> S
+    E["style_examples.json<br/>your real reply style"] --> S
+    K["contacts.json<br/>per-person rules"] --> S
+    R["Safety rules<br/>no promises, no OTPs,<br/>serious topics deferred"] --> S
+    C --> S["System prompt"]
+    S --> L["LLM<br/>Gemini (default) or Claude"]
+    L --> M["1-3 short texts<br/>in your style"]
+    M --> B
+    M --> C
+```
+
+
 - `persona/persona.md` — who you are (copy `persona/persona.example.md`; the real file is git-ignored)
 - `persona/contacts.json` — optional per-contact instructions matched by name (copy `persona/contacts.example.json`; git-ignored because it names real people)
 - `persona/style_examples.json` — how you actually text (extracted from your real chat exports)
